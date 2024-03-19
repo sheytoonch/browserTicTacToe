@@ -8,3 +8,10 @@ A number is added to distinguish players with similar colors.
 
 
 Have fun! :)
+
+
+---------------------------------------------
+19.03.2024
+I started coding this game to learn how event listeners work.
+It is actually my 1st fully developed project.
+Game finally finished!

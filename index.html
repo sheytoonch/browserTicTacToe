@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe v1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="container">
+        <div id="leftSide" class="backgroundColor">
+            <div class="inputSection">
+                <label for="numberOfRows" class="labelTextColor">Rows:<span class="distanceSpan"></span></label>
+                <input class="inputArea" type="number" id="numberOfRows" name="numberOfRows" placeholder="3" min="3" max="10">
+            </div>
+            <div class="inputSection">
+                <label for="numberOfColumns" class="labelTextColor">Columns:<span class="distanceSpan"></span></label>
+                <input class="inputArea" type="number" id="numberOfColumns" name="numberOfColumns" placeholder="3" min="3" max="10">
+            </div>
+            <div class="inputSection">
+                <label for="numberOfComputers" class="labelTextColor">Computers:<span class="distanceSpan"></span></label>
+                <input class="inputArea" type="number" id="numberOfComputers" name="numberOfComputers" placeholder="1" min="1" max="5">
+            </div>
+            <div class="inputSection">
+                <label for="winningStreak" class="labelTextColor">Winning streak:<span class="distanceSpan"></span></label>
+                <input class="inputArea" type="number" id="winningStreak" name="winningStreak" placeholder="3" min="3" max="5">
+            </div>
+            <div class="inputSection">
+                <button id="playButton">NEW GAME!</button>
+            </div>
+        </div>
+
+        <div id="rightSide">
+            <div class="squareContainer">
+                <div class="square clickable"></div>
+                <div class="square clickable"></div>
+                <div class="square clickable"></div>
+            </div>
+            <div class="squareContainer">
+                <div class="square clickable"></div>
+                <div class="square clickable"></div>
+                <div class="square clickable"></div>
+            </div>
+            <div class="squareContainer">
+                <div class="square clickable"></div>
+                <div class="square clickable"></div>
+                <div class="square clickable"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
