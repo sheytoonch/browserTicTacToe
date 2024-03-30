@@ -160,6 +160,50 @@ function getFieldsInLine(playersFields, fieldValues, xStep, yStep) {
 }
 
 
+// JUST OUTCOMMENTED - IT WORKS 
+// function getFieldsInDiagonal(playersFields, fieldValues, yStep) {
+//     // playersFields are nodes
+//     let fieldsAhead = [];
+//     let fieldsBehind = [];
+    
+//     let x = fieldValues.x;
+//     let y = fieldValues.y;
+
+//     // both vectors, but y depends on the input
+//     for(let i = 1; i < gameWinningStreak; i++) {
+//         x -= 1;
+//         y -= yStep;
+
+//         let isAttachedFieldFound = false;
+//         for(const field of playersFields) {
+//             if(field.value.x === x && field.value.y === y) {
+//                 fieldsBehind.push(field.value.id);
+//                 isAttachedFieldFound = true;
+//                 break;
+//             }
+//         }
+//         if(!isAttachedFieldFound) break;
+//     }
+
+//     for(let i = 1; i < gameWinningStreak; i++) {
+//         x += 1;
+//         y += yStep;
+
+//         let isAttachedFieldFound = false;
+//         for(const field of playersFields) {
+//             if(field.value.x === x && field.value.y === y) {
+//                 fieldsAhead.push(field.value.id);
+//                 isAttachedFieldFound = true;
+//                 break;
+//             }
+//         }
+//         if(!isAttachedFieldFound) break;
+//     }
+//     const fieldsInLine = [...fieldsAhead, fieldValues.id, ...fieldsBehind];
+//     return Array.from(new Set(fieldsInLine));
+// }
+
+
 function getFieldsInDiagonal(playersFields, fieldValues, yStep) {
     // playersFields are nodes
     let fieldsAhead = [];
@@ -201,6 +245,8 @@ function getFieldsInDiagonal(playersFields, fieldValues, yStep) {
         }
         if(!isAttachedFieldFound) break;
     }
+
+
     const fieldsInLine = [...fieldsAhead, fieldValues.id, ...fieldsBehind];
     return Array.from(new Set(fieldsInLine));
 }
